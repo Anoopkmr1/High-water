@@ -43,9 +43,8 @@ class LocationService: NSObject, CLLocationManagerDelegate {
        guard let location = locations.last else { return }
        if locations.last != nil {
            self.locationManager.stopUpdatingLocation()
-          let pref = UserPreferences()
-           pref.saveCoordinates("latitude", location.coordinate.latitude)
-           pref.saveCoordinates("longitude", location.coordinate.longitude)
+           UserPreferences().saveCoordinates("latitude", location.coordinate.latitude)
+           UserPreferences().saveCoordinates("longitude", location.coordinate.longitude)
        }
    }
     

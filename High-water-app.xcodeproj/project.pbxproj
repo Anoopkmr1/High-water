@@ -18,7 +18,7 @@
 		6E6BA65A2AC009F6004CCC55 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA6592AC009F6004CCC55 /* UserPreferences.swift */; };
 		6E6BA65D2AC00E9E004CCC55 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA65C2AC00E9E004CCC55 /* LocationModel.swift */; };
 		6E6BA65F2AC01259004CCC55 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA65E2AC01259004CCC55 /* FirebaseService.swift */; };
-		6E6BA6632AC01580004CCC55 /* Structure+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA6622AC01580004CCC55 /* Structure+Extension.swift */; };
+		6E6BA6632AC01580004CCC55 /* LocationModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA6622AC01580004CCC55 /* LocationModel+Extension.swift */; };
 		6E6BA6652AC01CE4004CCC55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E6BA6642AC01CE4004CCC55 /* GoogleService-Info.plist */; };
 		6E6BA6702AC09C5C004CCC55 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA66F2AC09C5C004CCC55 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -37,7 +37,7 @@
 		6E6BA6592AC009F6004CCC55 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		6E6BA65C2AC00E9E004CCC55 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		6E6BA65E2AC01259004CCC55 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
-		6E6BA6622AC01580004CCC55 /* Structure+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Structure+Extension.swift"; sourceTree = "<group>"; };
+		6E6BA6622AC01580004CCC55 /* LocationModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationModel+Extension.swift"; sourceTree = "<group>"; };
 		6E6BA6642AC01CE4004CCC55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E6BA66F2AC09C5C004CCC55 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		A7D827A42E5BF108C9EE7518 /* Pods-High-water-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-High-water-app.release.xcconfig"; path = "Target Support Files/Pods-High-water-app/Pods-High-water-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,7 +59,6 @@
 		6E1389962ABDD25A00C7CACA = {
 			isa = PBXGroup;
 			children = (
-				6E6BA6642AC01CE4004CCC55 /* GoogleService-Info.plist */,
 				6E1389A12ABDD25A00C7CACA /* High-water-app */,
 				6E1389A02ABDD25A00C7CACA /* Products */,
 				806B3355B7D39B273F140174 /* Pods */,
@@ -89,6 +88,7 @@
 				6E1389AE2ABDD25B00C7CACA /* Assets.xcassets */,
 				6E1389B02ABDD25B00C7CACA /* LaunchScreen.storyboard */,
 				6E1389B32ABDD25B00C7CACA /* Info.plist */,
+				6E6BA6642AC01CE4004CCC55 /* GoogleService-Info.plist */,
 			);
 			path = "High-water-app";
 			sourceTree = "<group>";
@@ -113,7 +113,7 @@
 		6E1389C02ABFF81000C7CACA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6E6BA6622AC01580004CCC55 /* Structure+Extension.swift */,
+				6E6BA6622AC01580004CCC55 /* LocationModel+Extension.swift */,
 				6E6BA66F2AC09C5C004CCC55 /* Date+Extension.swift */,
 			);
 			path = Extensions;
@@ -271,7 +271,7 @@
 				6E1389A72ABDD25A00C7CACA /* ViewController.swift in Sources */,
 				6E6BA65A2AC009F6004CCC55 /* UserPreferences.swift in Sources */,
 				6E1389A32ABDD25A00C7CACA /* AppDelegate.swift in Sources */,
-				6E6BA6632AC01580004CCC55 /* Structure+Extension.swift in Sources */,
+				6E6BA6632AC01580004CCC55 /* LocationModel+Extension.swift in Sources */,
 				6E6BA65D2AC00E9E004CCC55 /* LocationModel.swift in Sources */,
 				6E1389BC2ABDD94C00C7CACA /* LocationViewModel.swift in Sources */,
 				6E6BA65F2AC01259004CCC55 /* FirebaseService.swift in Sources */,
