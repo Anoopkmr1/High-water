@@ -27,7 +27,6 @@ extension LocationModel {
             let longitude = snapshot["longitude"] as? Double else {
                 return nil
         }
-
         self.latitude = latitude
         self.longitude = longitude
         self.docId = snapshot.documentID

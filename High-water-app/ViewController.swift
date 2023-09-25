@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewModelDelegate, MKMapViewDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewModelDelegate {
 
     @IBOutlet weak var topLbl: UILabel!
     @IBOutlet weak var mapView: MKMapView!
@@ -21,8 +21,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewM
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.showsUserLocation = true
-        mapView.delegate = self
-        locationManager.delegate = self
         locationViewModel.delegate = self
         locationViewModel.getCurrentUserLocation()
         locationViewModel.getDataFromFirebase()
@@ -33,9 +31,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewM
     }
     
     func responseSavedToFirebase(_ location: [LocationModel]) {
-              updateAnnotationss(location)
+              updateAnnotationsFromMap(location)
     }
-    
     
     func getUserLocation(_ location: LocationModel) {
         if location == nil {
@@ -55,16 +52,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewM
         self.mapView.addAnnotation(annotation)
     }
 
-    private func updateAnnotations() {
-        DispatchQueue.main.async {
-            self.mapView.removeAnnotations((self.mapView.annotations))
-            self.locationViewModel.firebaseResponse.forEach {result in
-                self.addFloodToMap(result)
-            }
-        }
-    }
-    
-    private func updateAnnotationss(_ locationn: [LocationModel]) {
+    private func updateAnnotationsFromMap(_ locationn: [LocationModel]) {
         DispatchQueue.main.async {
             self.mapView.removeAnnotations((self.mapView.annotations))
             locationn.forEach {result in
