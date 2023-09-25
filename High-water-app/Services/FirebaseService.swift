@@ -20,18 +20,48 @@ class FirebaseService: NSObject {
     
     private let db = Firestore.firestore()
     var documentRef: DocumentReference? = nil
+    var locations: [LocationModel] = []
     
     
-    func saveFloodToFirebase(_ dataMap: LocationModel) {
+    func saveFloodToFirebase(_ dataMap: LocationModel, completion:@escaping(_ id: String) -> Void) {
         self.documentRef = self.db.collection("High-water").addDocument(data: dataMap.toDictionary()) { [self] error in
             if let error = error {
                 print(error)
             } else {
                print("Data added")
+//                model.documentId = id
+                completion(documentRef!.documentID)
 //                flood.documentID = self?.documentRef?.documentID
 //                self?.addFloodToMap(flood)
             }
         }
     }
+    
+    func getFloodFromFirebase(completin:@escaping([LocationModel]?) -> Void) {
+        db.collection("High-water").getDocuments { [self] snapshot, error in
+            guard let documents = snapshot?.documents else {
+                print("Error fetching documents: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
+            
+            // Map the Firestore documents to Location objects
+            self.locations = documents.compactMap { document in
+                let data = document.data()
+                print("Anoop_doc:\(data)")
+                if let latitude = data["latitude"] as? Double, let longitude = data["longitude"] as? Double {
+                    return LocationModel(latitude: latitude, longitude: longitude, docId: "")
+//                    (latitude: latitude, longitude: longitude, documentId: "" )
+                } else {
+                    return nil // Skip this document if data extraction fails
+                }
+            }
+            completin(locations)
+        }
+    }
+    
+    func removeFloodFromFirebase() {
+        
+    }
+    
     
 }

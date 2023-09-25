@@ -35,7 +35,6 @@ class LocationService: NSObject, CLLocationManagerDelegate {
           let pref = UserPreferences()
            pref.saveCoordinates(location.coordinate.latitude, "latitude")
            pref.saveCoordinates(location.coordinate.longitude, "longitude")
-           print("Anoop_values:\(location.coordinate.latitude)")
        }
    }
     
