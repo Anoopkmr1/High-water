@@ -13,7 +13,6 @@ protocol LocationViewModelDelegate {
     func responseSavedToFirebase(_ location: [LocationModel])
 }
 
-
 class LocationViewModel: NSObject {
     
     var firebaseResponse:[LocationModel] = []
@@ -35,7 +34,6 @@ class LocationViewModel: NSObject {
         FirebaseService.shared.getFloodFromFirebase { response in
             if let locations = response {
                 self.firebaseResponse = locations
-                print("Retrieved locations: \(self.firebaseResponse)")
             }
             self.delegate?.responseSavedToFirebase(self.firebaseResponse)
         }

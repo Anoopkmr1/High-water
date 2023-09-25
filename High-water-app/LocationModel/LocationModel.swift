@@ -23,7 +23,6 @@ struct LocationModel {
 
 extension LocationModel {
     init?(_ snapshot: QueryDocumentSnapshot) {
-
         guard let latitude = snapshot["latitude"] as? Double,
             let longitude = snapshot["longitude"] as? Double else {
                 return nil

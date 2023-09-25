@@ -46,10 +46,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewM
         }
     }
     
-    func addFloodToMap(_ latitude: LocationModel) {
-        let annotation = Annotation(flood: latitude)
-        annotation.coordinate.latitude =  annotation.flood.latitude
-        annotation.coordinate.longitude =  annotation.flood.longitude
+    func addFloodToMap(_ location: LocationModel) {
+        let annotation = MKPointAnnotation()
+        annotation.coordinate.latitude =  location.latitude
+        annotation.coordinate.longitude =  location.longitude
         annotation.title = "Flooded"
         annotation.subtitle = Date().currentDate()
         self.mapView.addAnnotation(annotation)
@@ -59,7 +59,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewM
         DispatchQueue.main.async {
             self.mapView.removeAnnotations((self.mapView.annotations))
             self.locationViewModel.firebaseResponse.forEach {result in
-                print("Anoop")
                 self.addFloodToMap(result)
             }
         }

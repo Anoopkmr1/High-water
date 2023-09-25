@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		2E45AAE12C9F2280D586780A /* Pods_High_water_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47C577513D43E833336D636 /* Pods_High_water_app.framework */; };
 		6E1389A32ABDD25A00C7CACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1389A22ABDD25A00C7CACA /* AppDelegate.swift */; };
-		6E1389A52ABDD25A00C7CACA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1389A42ABDD25A00C7CACA /* SceneDelegate.swift */; };
 		6E1389A72ABDD25A00C7CACA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1389A62ABDD25A00C7CACA /* ViewController.swift */; };
 		6E1389AA2ABDD25A00C7CACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E1389A82ABDD25A00C7CACA /* Main.storyboard */; };
-		6E1389AD2ABDD25A00C7CACA /* High_water_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E1389AB2ABDD25A00C7CACA /* High_water_app.xcdatamodeld */; };
 		6E1389AF2ABDD25B00C7CACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E1389AE2ABDD25B00C7CACA /* Assets.xcassets */; };
 		6E1389B22ABDD25B00C7CACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E1389B02ABDD25B00C7CACA /* LaunchScreen.storyboard */; };
 		6E1389BC2ABDD94C00C7CACA /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1389BB2ABDD94C00C7CACA /* LocationViewModel.swift */; };
@@ -22,21 +20,15 @@
 		6E6BA65F2AC01259004CCC55 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA65E2AC01259004CCC55 /* FirebaseService.swift */; };
 		6E6BA6632AC01580004CCC55 /* Structure+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA6622AC01580004CCC55 /* Structure+Extension.swift */; };
 		6E6BA6652AC01CE4004CCC55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E6BA6642AC01CE4004CCC55 /* GoogleService-Info.plist */; };
-		6E6BA66C2AC06061004CCC55 /* 711-trash-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6BA6692AC06060004CCC55 /* 711-trash-toolbar.png */; };
-		6E6BA66D2AC06061004CCC55 /* 711-trash-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6BA66A2AC06060004CCC55 /* 711-trash-toolbar@3x.png */; };
-		6E6BA66E2AC06061004CCC55 /* 711-trash-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6BA66B2AC06061004CCC55 /* 711-trash-toolbar@2x.png */; };
 		6E6BA6702AC09C5C004CCC55 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA66F2AC09C5C004CCC55 /* Date+Extension.swift */; };
-		6E6BA6732AC0B130004CCC55 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA6722AC0B130004CCC55 /* Annotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		597BCA176EEEC317E200D091 /* Pods-High-water-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-High-water-app.debug.xcconfig"; path = "Target Support Files/Pods-High-water-app/Pods-High-water-app.debug.xcconfig"; sourceTree = "<group>"; };
 		6E13899F2ABDD25A00C7CACA /* High-water-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "High-water-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1389A22ABDD25A00C7CACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E1389A42ABDD25A00C7CACA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6E1389A62ABDD25A00C7CACA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6E1389A92ABDD25A00C7CACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6E1389AC2ABDD25A00C7CACA /* High_water_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = High_water_app.xcdatamodel; sourceTree = "<group>"; };
 		6E1389AE2ABDD25B00C7CACA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E1389B12ABDD25B00C7CACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E1389B32ABDD25B00C7CACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,11 +39,7 @@
 		6E6BA65E2AC01259004CCC55 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		6E6BA6622AC01580004CCC55 /* Structure+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Structure+Extension.swift"; sourceTree = "<group>"; };
 		6E6BA6642AC01CE4004CCC55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		6E6BA6692AC06060004CCC55 /* 711-trash-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "711-trash-toolbar.png"; sourceTree = "<group>"; };
-		6E6BA66A2AC06060004CCC55 /* 711-trash-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "711-trash-toolbar@3x.png"; sourceTree = "<group>"; };
-		6E6BA66B2AC06061004CCC55 /* 711-trash-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "711-trash-toolbar@2x.png"; sourceTree = "<group>"; };
 		6E6BA66F2AC09C5C004CCC55 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		6E6BA6722AC0B130004CCC55 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		A7D827A42E5BF108C9EE7518 /* Pods-High-water-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-High-water-app.release.xcconfig"; path = "Target Support Files/Pods-High-water-app/Pods-High-water-app.release.xcconfig"; sourceTree = "<group>"; };
 		E47C577513D43E833336D636 /* Pods_High_water_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_High_water_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,20 +78,17 @@
 		6E1389A12ABDD25A00C7CACA /* High-water-app */ = {
 			isa = PBXGroup;
 			children = (
-				6E6BA6712AC0B120004CCC55 /* Annotation */,
 				6E6BA6582AC009E2004CCC55 /* Common */,
 				6E1389C02ABFF81000C7CACA /* Extensions */,
 				6E1389BD2ABDDA0000C7CACA /* Services */,
 				6E6BA65B2AC00E87004CCC55 /* LocationModel */,
 				6E1389BA2ABDD8CA00C7CACA /* ViewModel */,
 				6E1389A22ABDD25A00C7CACA /* AppDelegate.swift */,
-				6E1389A42ABDD25A00C7CACA /* SceneDelegate.swift */,
 				6E1389A62ABDD25A00C7CACA /* ViewController.swift */,
 				6E1389A82ABDD25A00C7CACA /* Main.storyboard */,
 				6E1389AE2ABDD25B00C7CACA /* Assets.xcassets */,
 				6E1389B02ABDD25B00C7CACA /* LaunchScreen.storyboard */,
 				6E1389B32ABDD25B00C7CACA /* Info.plist */,
-				6E1389AB2ABDD25A00C7CACA /* High_water_app.xcdatamodeld */,
 			);
 			path = "High-water-app";
 			sourceTree = "<group>";
@@ -137,7 +122,6 @@
 		6E6BA6582AC009E2004CCC55 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				6E6BA6682AC0601F004CCC55 /* Images */,
 				6E6BA6592AC009F6004CCC55 /* UserPreferences.swift */,
 			);
 			path = Common;
@@ -149,24 +133,6 @@
 				6E6BA65C2AC00E9E004CCC55 /* LocationModel.swift */,
 			);
 			path = LocationModel;
-			sourceTree = "<group>";
-		};
-		6E6BA6682AC0601F004CCC55 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				6E6BA6692AC06060004CCC55 /* 711-trash-toolbar.png */,
-				6E6BA66B2AC06061004CCC55 /* 711-trash-toolbar@2x.png */,
-				6E6BA66A2AC06060004CCC55 /* 711-trash-toolbar@3x.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		6E6BA6712AC0B120004CCC55 /* Annotation */ = {
-			isa = PBXGroup;
-			children = (
-				6E6BA6722AC0B130004CCC55 /* Annotation.swift */,
-			);
-			path = Annotation;
 			sourceTree = "<group>";
 		};
 		806B3355B7D39B273F140174 /* Pods */ = {
@@ -246,10 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E6BA66D2AC06061004CCC55 /* 711-trash-toolbar@3x.png in Resources */,
 				6E1389B22ABDD25B00C7CACA /* LaunchScreen.storyboard in Resources */,
-				6E6BA66C2AC06061004CCC55 /* 711-trash-toolbar.png in Resources */,
-				6E6BA66E2AC06061004CCC55 /* 711-trash-toolbar@2x.png in Resources */,
 				6E6BA6652AC01CE4004CCC55 /* GoogleService-Info.plist in Resources */,
 				6E1389AF2ABDD25B00C7CACA /* Assets.xcassets in Resources */,
 				6E1389AA2ABDD25A00C7CACA /* Main.storyboard in Resources */,
@@ -306,9 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E1389A72ABDD25A00C7CACA /* ViewController.swift in Sources */,
-				6E6BA6732AC0B130004CCC55 /* Annotation.swift in Sources */,
 				6E6BA65A2AC009F6004CCC55 /* UserPreferences.swift in Sources */,
-				6E1389AD2ABDD25A00C7CACA /* High_water_app.xcdatamodeld in Sources */,
 				6E1389A32ABDD25A00C7CACA /* AppDelegate.swift in Sources */,
 				6E6BA6632AC01580004CCC55 /* Structure+Extension.swift in Sources */,
 				6E6BA65D2AC00E9E004CCC55 /* LocationModel.swift in Sources */,
@@ -316,7 +277,6 @@
 				6E6BA65F2AC01259004CCC55 /* FirebaseService.swift in Sources */,
 				6E6BA6702AC09C5C004CCC55 /* Date+Extension.swift in Sources */,
 				6E1389BF2ABDDA1200C7CACA /* LocationService.swift in Sources */,
-				6E1389A52ABDD25A00C7CACA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,19 +496,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		6E1389AB2ABDD25A00C7CACA /* High_water_app.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				6E1389AC2ABDD25A00C7CACA /* High_water_app.xcdatamodel */,
-			);
-			currentVersion = 6E1389AC2ABDD25A00C7CACA /* High_water_app.xcdatamodel */;
-			path = High_water_app.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 6E1389972ABDD25A00C7CACA /* Project object */;
 }
