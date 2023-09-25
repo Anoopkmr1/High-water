@@ -14,17 +14,4 @@ class Annotation: MKPointAnnotation {
     init(flood: LocationModel) {
         self.flood = flood
     }
-
-    
 }
-
-//class CustomAnnotation: MKPointAnnotation {
-//    var customImage: UIImage?
-//
-//    init(title: String?, subtitle: String?, image: UIImage?) {
-//        super.init()
-//        self.title = title
-//        self.subtitle = subtitle
-//        self.customImage = image
-//    }
-//}

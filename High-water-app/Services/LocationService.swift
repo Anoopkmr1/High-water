@@ -11,16 +11,11 @@ import CoreLocation
 class LocationService: NSObject, CLLocationManagerDelegate {
     
     var locationManager = CLLocationManager()
-    static let shared = LocationService()
     
     init(locationManager: CLLocationManager = CLLocationManager()) {
         self.locationManager = locationManager
     }
     
-    private override init() {
-        super.init()
-    }
-
     func getUserLocation() {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
@@ -33,8 +28,8 @@ class LocationService: NSObject, CLLocationManagerDelegate {
        if locations.last != nil {
            self.locationManager.stopUpdatingLocation()
           let pref = UserPreferences()
-           pref.saveCoordinates(location.coordinate.latitude, "latitude")
-           pref.saveCoordinates(location.coordinate.longitude, "longitude")
+           pref.saveCoordinates("latitude", location.coordinate.latitude)
+           pref.saveCoordinates("longitude", location.coordinate.longitude)
        }
    }
     

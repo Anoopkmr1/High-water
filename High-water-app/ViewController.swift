@@ -41,10 +41,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewM
         print("Anoop_model:\(location)")
         if location == nil {
             let locations = locationViewModel.model
-//            addFloodToMap((locationManager.location?.coordinate.latitude)!, (locationManager.location?.coordinate.longitude)!)
             addFloodToMap(locations)
         } else {
-//            addFloodToMap(location.latitude, location.longitude)
             addFloodToMap(location)
         }
     }
@@ -57,15 +55,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewM
         annotation.subtitle = Date().currentDate()
         self.mapView.addAnnotation(annotation)
     }
-    
-//    func addFloodToMap(_ latitude: Double, _ longitude: Double) {
-//        let annotation = MKPointAnnotation()
-//        annotation.coordinate.latitude =  latitude
-//        annotation.coordinate.longitude =  longitude
-//        annotation.title = "Flooded"
-//        annotation.subtitle = Date().currentDate()
-//        self.mapView.addAnnotation(annotation)
-//    }
 
     private func updateAnnotations() {
         DispatchQueue.main.async {

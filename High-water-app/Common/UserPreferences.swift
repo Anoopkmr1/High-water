@@ -10,7 +10,7 @@ import Foundation
 
 struct UserPreferences {
     
-    func saveCoordinates(_ value: Double, _ key: String) {
+    func saveCoordinates(_ key: String, _ value: Double) {
         UserDefaults.standard.set(value, forKey: key)
     }
     

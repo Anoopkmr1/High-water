@@ -17,17 +17,14 @@ protocol LocationViewModelDelegate {
 class LocationViewModel: NSObject {
     
     var firebaseResponse:[LocationModel] = []
-//    var firebaseId: FirebaseModel?
     var delegate: LocationViewModelDelegate?
     var model =  LocationModel(latitude: UserPreferences().getCoordinates("latitude"), longitude: UserPreferences().getCoordinates("longitude"), docId: "" )
     
     func getCurrentUserLocation() {
-        LocationService.shared.getUserLocation()   
+        LocationService().getUserLocation()
     }
     
     func saveDataToFirebase() {
-//        delegate2?.responseSavedToFirebase()
-//        FirebaseService.shared.saveFloodToFirebase(model, completion: <#(String) -> Void#>)
         FirebaseService.shared.saveFloodToFirebase(model) { id in
             self.model.docId = id
         }
@@ -36,16 +33,12 @@ class LocationViewModel: NSObject {
     
     func getDataFromFirebase() {
         FirebaseService.shared.getFloodFromFirebase { response in
-             if let locations = response {
-                 self.firebaseResponse = locations
-                 print("Retrieved locations: \(self.firebaseResponse)")
-                }
-            self.delegate?.responseSavedToFirebase(self.firebaseResponse)
+            if let locations = response {
+                self.firebaseResponse = locations
+                print("Retrieved locations: \(self.firebaseResponse)")
             }
-       
+            self.delegate?.responseSavedToFirebase(self.firebaseResponse)
+        }
     }
-    
-    
-    
-    
+
 }

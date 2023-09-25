@@ -29,10 +29,7 @@ class FirebaseService: NSObject {
                 print(error)
             } else {
                print("Data added")
-//                model.documentId = id
                 completion(documentRef!.documentID)
-//                flood.documentID = self?.documentRef?.documentID
-//                self?.addFloodToMap(flood)
             }
         }
     }
@@ -47,20 +44,14 @@ class FirebaseService: NSObject {
             // Map the Firestore documents to Location objects
             self.locations = documents.compactMap { document in
                 let data = document.data()
-                print("Anoop_doc:\(data)")
                 if let latitude = data["latitude"] as? Double, let longitude = data["longitude"] as? Double {
                     return LocationModel(latitude: latitude, longitude: longitude, docId: "")
-//                    (latitude: latitude, longitude: longitude, documentId: "" )
                 } else {
-                    return nil // Skip this document if data extraction fails
+                    return nil
                 }
             }
             completin(locations)
         }
-    }
-    
-    func removeFloodFromFirebase() {
-        
     }
     
     

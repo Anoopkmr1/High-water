@@ -17,14 +17,11 @@
 		6E1389B22ABDD25B00C7CACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E1389B02ABDD25B00C7CACA /* LaunchScreen.storyboard */; };
 		6E1389BC2ABDD94C00C7CACA /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1389BB2ABDD94C00C7CACA /* LocationViewModel.swift */; };
 		6E1389BF2ABDDA1200C7CACA /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1389BE2ABDDA1200C7CACA /* LocationService.swift */; };
-		6E1389C22ABFF82D00C7CACA /* VC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1389C12ABFF82D00C7CACA /* VC+Extension.swift */; };
 		6E6BA65A2AC009F6004CCC55 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA6592AC009F6004CCC55 /* UserPreferences.swift */; };
 		6E6BA65D2AC00E9E004CCC55 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA65C2AC00E9E004CCC55 /* LocationModel.swift */; };
 		6E6BA65F2AC01259004CCC55 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA65E2AC01259004CCC55 /* FirebaseService.swift */; };
-		6E6BA6612AC01355004CCC55 /* FirebaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA6602AC01355004CCC55 /* FirebaseResponse.swift */; };
 		6E6BA6632AC01580004CCC55 /* Structure+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA6622AC01580004CCC55 /* Structure+Extension.swift */; };
 		6E6BA6652AC01CE4004CCC55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E6BA6642AC01CE4004CCC55 /* GoogleService-Info.plist */; };
-		6E6BA6672AC05F34004CCC55 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6BA6662AC05F34004CCC55 /* UIButton+Extension.swift */; };
 		6E6BA66C2AC06061004CCC55 /* 711-trash-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6BA6692AC06060004CCC55 /* 711-trash-toolbar.png */; };
 		6E6BA66D2AC06061004CCC55 /* 711-trash-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6BA66A2AC06060004CCC55 /* 711-trash-toolbar@3x.png */; };
 		6E6BA66E2AC06061004CCC55 /* 711-trash-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6BA66B2AC06061004CCC55 /* 711-trash-toolbar@2x.png */; };
@@ -45,14 +42,11 @@
 		6E1389B32ABDD25B00C7CACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E1389BB2ABDD94C00C7CACA /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		6E1389BE2ABDDA1200C7CACA /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
-		6E1389C12ABFF82D00C7CACA /* VC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+Extension.swift"; sourceTree = "<group>"; };
 		6E6BA6592AC009F6004CCC55 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		6E6BA65C2AC00E9E004CCC55 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		6E6BA65E2AC01259004CCC55 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
-		6E6BA6602AC01355004CCC55 /* FirebaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseResponse.swift; sourceTree = "<group>"; };
 		6E6BA6622AC01580004CCC55 /* Structure+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Structure+Extension.swift"; sourceTree = "<group>"; };
 		6E6BA6642AC01CE4004CCC55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		6E6BA6662AC05F34004CCC55 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		6E6BA6692AC06060004CCC55 /* 711-trash-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "711-trash-toolbar.png"; sourceTree = "<group>"; };
 		6E6BA66A2AC06060004CCC55 /* 711-trash-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "711-trash-toolbar@3x.png"; sourceTree = "<group>"; };
 		6E6BA66B2AC06061004CCC55 /* 711-trash-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "711-trash-toolbar@2x.png"; sourceTree = "<group>"; };
@@ -134,9 +128,7 @@
 		6E1389C02ABFF81000C7CACA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6E1389C12ABFF82D00C7CACA /* VC+Extension.swift */,
 				6E6BA6622AC01580004CCC55 /* Structure+Extension.swift */,
-				6E6BA6662AC05F34004CCC55 /* UIButton+Extension.swift */,
 				6E6BA66F2AC09C5C004CCC55 /* Date+Extension.swift */,
 			);
 			path = Extensions;
@@ -155,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				6E6BA65C2AC00E9E004CCC55 /* LocationModel.swift */,
-				6E6BA6602AC01355004CCC55 /* FirebaseResponse.swift */,
 			);
 			path = LocationModel;
 			sourceTree = "<group>";
@@ -317,15 +308,12 @@
 				6E1389A72ABDD25A00C7CACA /* ViewController.swift in Sources */,
 				6E6BA6732AC0B130004CCC55 /* Annotation.swift in Sources */,
 				6E6BA65A2AC009F6004CCC55 /* UserPreferences.swift in Sources */,
-				6E6BA6672AC05F34004CCC55 /* UIButton+Extension.swift in Sources */,
 				6E1389AD2ABDD25A00C7CACA /* High_water_app.xcdatamodeld in Sources */,
 				6E1389A32ABDD25A00C7CACA /* AppDelegate.swift in Sources */,
-				6E6BA6612AC01355004CCC55 /* FirebaseResponse.swift in Sources */,
 				6E6BA6632AC01580004CCC55 /* Structure+Extension.swift in Sources */,
 				6E6BA65D2AC00E9E004CCC55 /* LocationModel.swift in Sources */,
 				6E1389BC2ABDD94C00C7CACA /* LocationViewModel.swift in Sources */,
 				6E6BA65F2AC01259004CCC55 /* FirebaseService.swift in Sources */,
-				6E1389C22ABFF82D00C7CACA /* VC+Extension.swift in Sources */,
 				6E6BA6702AC09C5C004CCC55 /* Date+Extension.swift in Sources */,
 				6E1389BF2ABDDA1200C7CACA /* LocationService.swift in Sources */,
 				6E1389A52ABDD25A00C7CACA /* SceneDelegate.swift in Sources */,
@@ -476,7 +464,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7FR7T98PVQ;
+				DEVELOPMENT_TEAM = 2UMVKA3VBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "High-water-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -505,7 +493,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7FR7T98PVQ;
+				DEVELOPMENT_TEAM = 2UMVKA3VBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "High-water-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
