@@ -38,7 +38,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewM
     
     
     func getUserLocation(_ location: LocationModel) {
-        print("Anoop_model:\(location)")
         if location == nil {
             let locations = locationViewModel.model
             addFloodToMap(locations)

@@ -11,15 +11,31 @@ import CoreLocation
 class LocationService: NSObject, CLLocationManagerDelegate {
     
     var locationManager = CLLocationManager()
+    static let shared = LocationService()
     
     init(locationManager: CLLocationManager = CLLocationManager()) {
         self.locationManager = locationManager
     }
     
-    func getUserLocation() {
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
+    private override init() {
+        super.init()
+    }
+    
+    func checkLocationPermission() {
         locationManager.delegate = self
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedWhenInUse, .authorizedAlways:
+            getUserLocation()
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        default:
+            return
+        }
+    }
+
+    func getUserLocation() {
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
     }
     

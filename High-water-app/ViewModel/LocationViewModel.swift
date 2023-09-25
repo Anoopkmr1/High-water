@@ -21,7 +21,7 @@ class LocationViewModel: NSObject {
     var model =  LocationModel(latitude: UserPreferences().getCoordinates("latitude"), longitude: UserPreferences().getCoordinates("longitude"), docId: "" )
     
     func getCurrentUserLocation() {
-        LocationService().getUserLocation()
+        LocationService.shared.checkLocationPermission()
     }
     
     func saveDataToFirebase() {
