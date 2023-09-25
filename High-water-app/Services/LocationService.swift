@@ -40,13 +40,13 @@ class LocationService: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-       guard let location = locations.last else { return }
-       if locations.last != nil {
-           self.locationManager.stopUpdatingLocation()
-           UserPreferences().saveCoordinates("latitude", location.coordinate.latitude)
-           UserPreferences().saveCoordinates("longitude", location.coordinate.longitude)
-       }
-   }
+        guard let location = locations.last else { return }
+        if locations.last != nil {
+            self.locationManager.stopUpdatingLocation()
+            UserPreferences().saveCoordinates("latitude", location.coordinate.latitude)
+            UserPreferences().saveCoordinates("longitude", location.coordinate.longitude)
+        }
+    }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {

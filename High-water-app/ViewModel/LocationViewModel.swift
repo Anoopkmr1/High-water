@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 
 protocol LocationViewModelDelegate {
-    func getUserLocation(_ location: LocationModel)
+    func pinUserLocation(_ location: LocationModel)
     func responseSavedToFirebase(_ location: [LocationModel])
 }
 
@@ -27,7 +27,7 @@ class LocationViewModel: NSObject {
         FirebaseService.shared.saveFloodToFirebase(model) { id in
             self.model.docId = id
         }
-        delegate?.getUserLocation(model)
+        delegate?.pinUserLocation(model)
     }
     
     func getDataFromFirebase() {

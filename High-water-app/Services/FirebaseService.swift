@@ -28,7 +28,7 @@ class FirebaseService: NSObject {
             if let error = error {
                 print(error)
             } else {
-               print("Data added")
+                print("Data added")
                 completion(documentRef!.documentID)
             }
         }
@@ -53,6 +53,7 @@ class FirebaseService: NSObject {
             completin(locations)
         }
     }
+    
     
     
 }

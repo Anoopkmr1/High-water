@@ -18,17 +18,18 @@ struct LocationModel {
         self.latitude = latitude
         self.longitude = longitude
         self.docId = docId
-    } 
+    }
 }
 
 extension LocationModel {
     init?(_ snapshot: QueryDocumentSnapshot) {
         guard let latitude = snapshot["latitude"] as? Double,
-            let longitude = snapshot["longitude"] as? Double else {
-                return nil
+              let longitude = snapshot["longitude"] as? Double else {
+            return nil
         }
         self.latitude = latitude
         self.longitude = longitude
         self.docId = snapshot.documentID
     }
 }
+

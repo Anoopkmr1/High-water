@@ -31,16 +31,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewM
     }
     
     func responseSavedToFirebase(_ location: [LocationModel]) {
-              updateAnnotationsFromMap(location)
+        updateAnnotationsFromMap(location)
     }
     
-    func getUserLocation(_ location: LocationModel) {
-        if location == nil {
-            let locations = locationViewModel.model
-            addFloodToMap(locations)
-        } else {
-            addFloodToMap(location)
-        }
+    func pinUserLocation(_ location: LocationModel) {
+        addFloodToMap(location)
     }
     
     func addFloodToMap(_ location: LocationModel) {
@@ -60,7 +55,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewM
             }
         }
     }
-    
+      
     
 }
 
