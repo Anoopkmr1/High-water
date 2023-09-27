@@ -43,7 +43,7 @@ class LocationViewModel: NSObject {
     
     func deletePin(_ id: String, completion:@escaping(_ result: String) -> Void) {
         FirebaseService.shared.removePinFromFirebase(id) { response in
-            if response == "sucess" {
+            if response == "success" {
                 completion(response)
             }
         }

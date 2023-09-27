@@ -62,14 +62,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewM
             return
         }
         mapView.removeAnnotation(view.annotation!)
-        let response = locationViewModel.firebaseResponse
         locationViewModel.deletePin(id!) { result in
             if result == "success" {
                 print("Deleted")
             }
         }
     }
-    
-    
+ 
 }
 
