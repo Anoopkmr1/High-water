@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewModelDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewModelDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var topLbl: UILabel!
     @IBOutlet weak var mapView: MKMapView!
@@ -22,6 +22,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewM
         super.viewDidLoad()
         mapView.showsUserLocation = true
         locationViewModel.delegate = self
+        mapView.delegate = self
         locationViewModel.getCurrentUserLocation()
         locationViewModel.getDataFromFirebase()
     }
@@ -43,7 +44,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewM
         annotation.coordinate.latitude =  location.latitude
         annotation.coordinate.longitude =  location.longitude
         annotation.title = "Flooded"
-        annotation.subtitle = Date().currentDate()
+        annotation.subtitle = location.docId
         self.mapView.addAnnotation(annotation)
     }
 
@@ -55,7 +56,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate, LocationViewM
             }
         }
     }
-      
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let id = view.annotation?.subtitle else {
+            return
+        }
+        mapView.removeAnnotation(view.annotation!)
+        let response = locationViewModel.firebaseResponse
+        locationViewModel.deletePin(id!) { result in
+            if result == "success" {
+                print("Deleted")
+            }
+        }
+    }
+    
     
 }
 

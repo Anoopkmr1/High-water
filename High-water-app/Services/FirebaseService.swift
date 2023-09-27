@@ -24,6 +24,7 @@ class FirebaseService: NSObject {
     
     
     func saveFloodToFirebase(_ dataMap: LocationModel, completion:@escaping(_ id: String) -> Void) {
+        var flood = LocationModel(latitude: dataMap.latitude, longitude: dataMap.longitude, docId: "")
         self.documentRef = self.db.collection("High-water").addDocument(data: dataMap.toDictionary()) { [self] error in
             if let error = error {
                 print(error)
@@ -34,7 +35,7 @@ class FirebaseService: NSObject {
         }
     }
     
-    func getFloodFromFirebase(completin:@escaping([LocationModel]?) -> Void) {
+    func getFloodFromFirebase(completin: @escaping([LocationModel]?) -> Void) {
         db.collection("High-water").getDocuments { [self] snapshot, error in
             guard let documents = snapshot?.documents else {
                 print("Error fetching documents: \(error?.localizedDescription ?? "Unknown error")")
@@ -43,9 +44,10 @@ class FirebaseService: NSObject {
             
             // Map the Firestore documents to Location objects
             self.locations = documents.compactMap { document in
+                let docId = document.documentID
                 let data = document.data()
                 if let latitude = data["latitude"] as? Double, let longitude = data["longitude"] as? Double {
-                    return LocationModel(latitude: latitude, longitude: longitude, docId: "")
+                    return LocationModel(latitude: latitude, longitude: longitude, docId: docId)
                 } else {
                     return nil
                 }
@@ -54,6 +56,17 @@ class FirebaseService: NSObject {
         }
     }
     
+    
+    func  removePinFromFirebase(_ id: String, completion:@escaping(_ result: String) -> Void) {
+        db.collection("High-water").document(id).delete() { error in
+            if let error = error {
+                print("Error:\(error.localizedDescription)")
+            } else {
+                print("success")
+                completion("success")
+            }
+        }
+    }
     
     
 }

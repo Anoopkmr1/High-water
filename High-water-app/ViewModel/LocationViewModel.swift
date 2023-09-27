@@ -17,17 +17,19 @@ class LocationViewModel: NSObject {
     
     var firebaseResponse:[LocationModel] = []
     var delegate: LocationViewModelDelegate?
-    var model =  LocationModel(latitude: UserPreferences().getCoordinates("latitude"), longitude: UserPreferences().getCoordinates("longitude"), docId: "" )
+    
     
     func getCurrentUserLocation() {
         LocationService.shared.checkLocationPermission()
     }
     
     func saveDataToFirebase() {
+        var model =  LocationModel(latitude: UserPreferences().getCoordinates("latitude"), longitude: UserPreferences().getCoordinates("longitude"), docId: "" )
         FirebaseService.shared.saveFloodToFirebase(model) { id in
-            self.model.docId = id
+            model.docId = id
+            self.delegate?.pinUserLocation(model)
         }
-        delegate?.pinUserLocation(model)
+       
     }
     
     func getDataFromFirebase() {
@@ -36,6 +38,14 @@ class LocationViewModel: NSObject {
                 self.firebaseResponse = locations
             }
             self.delegate?.responseSavedToFirebase(self.firebaseResponse)
+        }
+    }
+    
+    func deletePin(_ id: String, completion:@escaping(_ result: String) -> Void) {
+        FirebaseService.shared.removePinFromFirebase(id) { response in
+            if response == "sucess" {
+                completion(response)
+            }
         }
     }
 
